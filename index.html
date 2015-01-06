@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width,user-scalable=no">
+    <script src="zepto.js"></script>
+    <script src="TouchMagnet.js"></script>
+    <style>
+        .item{
+            display: none;
+        }
+        #panel{
+            position: absolute;
+            width: 80%;
+            height: 90%;
+            border: solid 1px rgba(235, 165, 40, 1);
+            overflow: hidden;
+        }
+        #panel .item{
+            display: block;
+            background: rgba(81, 235, 96, 1);
+            color: #ffffff;
+            padding: 10px;
+            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+        }
+        #panel .item.active{
+            background: rgba(235, 98, 67, 0.91);
+            -webkit-transform: scale(1.05,1.05);
+        }
+        #msg{
+            position: absolute;
+            z-index: 99;
+            right: 0;
+            top: 0;
+            background: rgba(62, 62, 62, 0.91);
+            color: #ffffff;
+            font-size: 13px;
+            font-weight: bold;
+        }
+        #msg > div{
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+<div id="panel"></div>
+<div id="msg"></div>
+<div class="item"></div>
+<script>
+    var g = new TouchMagnet("panel",{replaceDelay:0,itemHoldTimeout:500});
+    var template = $(".item");
+    for(var i=0;i<10;i++){
+        var c = template.clone();
+        c.html("<h2>"+(i+1)+"</h2>");
+        c = c.get(0);
+        c.index = i+1;
+        g.add(c,{width:100,height:100});
+    }
+    g.bind("tapitem",function(evt,item){
+        toastMsg("click:"+(item.index+1))
+    });
+    g.bind("holditem",function(evt,item){
+        var $item = $(item);
+        $item.addClass("active");
+    });
+    g.bind("releaseitem",function(evt,item){
+        $(item).removeClass("active");
+    });
+
+    var msgTag = $("#msg"),time;
+    function toastMsg(msg){
+        msgTag.html("<div>"+msg+"</div>");
+        if(time){
+            clearTimeout(time);
+            time = null;
+        }
+        time = setTimeout(function(){
+            msgTag.html("");
+        },3000);
+    }
+</script>
+</body>
+</html>
