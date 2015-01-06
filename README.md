@@ -46,32 +46,33 @@ option: 选填
 
 方法：
 
-add(item,option) 添加一个磁贴元素
-remove(item) 移除一个磁贴元素
-removeAll() 移除所有磁贴元素
-pop() 移除最后磁贴元素
-get(index) 根据下标获取对应的磁贴元素
-size() 磁贴总个数
-indexOf(item) 获取磁贴下标位置
-destroy() 销毁磁贴组
-replace(a,b) 替换磁贴元素，位置互换
+- add(item,option) 添加一个磁贴元素
+- remove(item) 移除一个磁贴元素
+- removeAll() 移除所有磁贴元素
+- pop() 移除最后磁贴元素
+- get(index) 根据下标获取对应的磁贴元素
+- size() 磁贴总个数
+- indexOf(item) 获取磁贴下标位置
+- destroy() 销毁磁贴组
+- replace(a,b) 替换磁贴元素，位置互换
 
 事件，Eevnts
-addpage： 新增分页
-pagedown：向后翻页
-pageup：向前翻页
-poppage：移除分页
-dragstart：滑页开始
-dragmove：滑页移动
-dragend：滑页结束
 
-removeitem：移除一个元素
-destory：销毁
-focusitem：元素获得焦点
-dragitem：拖拽元素
-tapitem：点击元素
-holditem：长按元素
-releaseitem：手指在元素上松开
+- addpage： 新增分页
+- pagedown：向后翻页
+- pageup：向前翻页
+- poppage：移除分页
+- dragstart：滑页开始
+- dragmove：滑页移动
+- dragend：滑页结束
+
+- removeitem：移除一个元素
+- destory：销毁
+- focusitem：元素获得焦点
+- dragitem：拖拽元素
+- tapitem：点击元素
+- holditem：长按元素
+- releaseitem：手指在元素上松开
 
 添加时间侦听
 ```
