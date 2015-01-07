@@ -1,0 +1,23 @@
+{
+  "name": "jsTouchMagnet",
+  "version": "1.1",
+  "authors": [
+    "m@brafox.com"
+  ],
+  "description": "仿zaker,js版磁贴插件",
+  "main": "index.html",
+  "keywords": [
+    "js",
+    "touch",
+    "magent"
+  ],
+  "license": "MIT",
+  "homepage": "http://www.brafox.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
