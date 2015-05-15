@@ -74,6 +74,7 @@ option: 选填
 - holditem：长按元素
 - releaseitem：手指在元素上松开
 
+<<<<<<< HEAD
 添加事件监听
 ```
 t.bind(event,callback)
@@ -83,3 +84,13 @@ t.bind(event,callback)
 ```
 t.unbind(event,callback)
 ```
+=======
+添加事件
+`
+t.bind(evnt,callback)
+`
+移除事件
+`
+t.ubind(event,callback)
+`
+>>>>>>> 9acdf87bd8077a8f52771140053e8c6f1a1a4ffd

@@ -6,6 +6,9 @@
   ],
   "description": "仿zaker,js版磁贴插件",
   "main": "index.html",
+  "dependencies":{
+    "jsTouchMagnet":"jsTouchMagnet"
+  }
   "keywords": [
     "js",
     "touch",
