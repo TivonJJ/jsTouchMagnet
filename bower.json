@@ -8,7 +8,7 @@
   "main": "index.html",
   "dependencies":{
     "jsTouchMagnet":"jsTouchMagnet"
-  }
+  },
   "keywords": [
     "js",
     "touch",
