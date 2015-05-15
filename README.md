@@ -74,7 +74,12 @@ option: 选填
 - holditem：长按元素
 - releaseitem：手指在元素上松开
 
-添加时间侦听
+添加事件监听
 ```
-t.bind(evnt,callback)
+t.bind(event,callback)
+```
+
+移除事件监听
+```
+t.unbind(event,callback)
 ```
